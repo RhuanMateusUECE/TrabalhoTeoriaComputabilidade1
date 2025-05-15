@@ -1,9 +1,0 @@
-# Gramática: G = ({S, B, C}, {a, b, c}, P, S)
-
-S -> aS
-S -> bB
-S -> cC
-C -> bB
-C -> S
-C -> ε
-B -> ε
