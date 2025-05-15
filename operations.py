@@ -8,69 +8,42 @@ from automato import AutomatoFinitoDeterministico, AutomatoFinitoNaoDeterministi
 from afn_to_afd import converter_afn_para_afd
 
 def aplicar_reverso(afd):
-    # PARTE 1: Transformar AFD com |F| > 1 em AFD' com |F| = 1
-    if len(afd.estados_finais) > 1:
-        # Criar AFD intermediário
-        afd_intermediario = AutomatoFinitoDeterministico(
-            alfabeto=afd.alfabeto.copy(),
-            nome="AFD Intermediário"
-        )
-        
-        # Copiar estados e transições
-        for estado in afd.estados:
-            afd_intermediario.adicionar_estado(estado)
-        
-        afd_intermediario.definir_estado_inicial(afd.estado_inicial)
-        
-        # Copiar transições
-        for (estado_origem, simbolo), estado_destino in afd.transicoes.items():
-            afd_intermediario.adicionar_transicao(estado_origem, simbolo, estado_destino)
-        
-        # Criar novo estado final único
-        novo_estado_final = "qf_unico"
-        afd_intermediario.adicionar_estado(novo_estado_final)
-        afd_intermediario.adicionar_estado_final(novo_estado_final)
-        
-        # Adicionar transições dos antigos estados finais para o novo estado final
-        for estado in afd.estados_finais:
-            for simbolo in afd.alfabeto:
-                # Verificar se há transições de algum estado final
-                if (estado, simbolo) in afd.transicoes:
-                    destino = afd.transicoes[(estado, simbolo)]
-                    # Se o destino é um estado não-final, manter a transição original
-                    if destino not in afd.estados_finais:
-                        afd_intermediario.adicionar_transicao(estado, simbolo, destino)
-                    # Se o destino é um estado final, adicionar transição para o novo estado final
-                    else:
-                        afd_intermediario.adicionar_transicao(estado, simbolo, novo_estado_final)
-                        
-        # Adicionar transições do novo estado final para si mesmo para todos os símbolos
-        for simbolo in afd.alfabeto:
-            afd_intermediario.adicionar_transicao(novo_estado_final, simbolo, novo_estado_final)
-    else:
-        # Se já tem apenas um estado final, usar o AFD original
-        afd_intermediario = afd
+    """
+    Aplica a operação de reverso a um Autômato Finito Determinístico (AFD).
     
-    # PARTE 2: Converter AFD' para AFD" (Reverso)
-    # Criar um AFN para o reverso
+    O reverso de um autômato é obtido invertendo a direção de todas as transições
+    e trocando o estado inicial e os estados finais.
+    
+    Args:
+        afd: AutomatoFinitoDeterministico a ser revertido.
+        
+    Returns:
+        AutomatoFinitoDeterministico: O AFD resultante após a operação de reverso.
+    """
+    # Primeiro, criamos um AFN que representa o reverso do AFD
     afn_reverso = AutomatoFinitoNaoDeterministico(
-        alfabeto=afd_intermediario.alfabeto.copy(),
+        alfabeto=afd.alfabeto.copy(),
         nome="AFN Reverso"
     )
     
     # Adicionar estados
-    for estado in afd_intermediario.estados:
+    for estado in afd.estados:
         afn_reverso.adicionar_estado(estado)
     
-    # O estado inicial do reverso é o estado final do intermediário
-    afn_reverso.definir_estado_inicial(list(afd_intermediario.estados_finais)[0])
+    # Adicionar um novo estado inicial
+    afn_reverso.adicionar_estado("q_inicial_reverso")
+    afn_reverso.definir_estado_inicial("q_inicial_reverso")
     
-    # O estado final do reverso é o estado inicial do intermediário
-    afn_reverso.adicionar_estado_final(afd_intermediario.estado_inicial)
+    # Adicionar transições epsilon do novo estado inicial para os antigos estados finais
+    for estado_final in afd.estados_finais:
+        afn_reverso.adicionar_transicao("q_inicial_reverso", "ε", estado_final)
     
     # Inverter as transições
-    for (estado_origem, simbolo), estado_destino in afd_intermediario.transicoes.items():
+    for (estado_origem, simbolo), estado_destino in afd.transicoes.items():
         afn_reverso.adicionar_transicao(estado_destino, simbolo, estado_origem)
+    
+    # Adicionar o antigo estado inicial como estado final do AFN reverso
+    afn_reverso.adicionar_estado_final(afd.estado_inicial)
     
     # Converter o AFN reverso para AFD
     afd_reverso = converter_afn_para_afd(afn_reverso)
