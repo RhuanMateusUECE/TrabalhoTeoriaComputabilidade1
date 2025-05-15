@@ -1,0 +1,8 @@
+# AFD Determinizado
+Q: q0, q1
+Σ: a, b
+δ:
+q0, a -> q1
+q1, b -> q0
+q0: q0
+F: q0

@@ -1,0 +1,8 @@
+# AFN Original
+Q: A, S, qf
+Σ: a, b
+δ:
+A, b -> {S}
+S, a -> {A}
+q0: S
+F: S, qf

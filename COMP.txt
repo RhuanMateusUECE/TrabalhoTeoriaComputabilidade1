@@ -1,0 +1,12 @@
+# AFD Complemento
+Q: q0, q1, q_sumidouro
+Σ: a, b
+δ:
+q0, a -> q1
+q0, b -> q_sumidouro
+q1, a -> q_sumidouro
+q1, b -> q0
+q_sumidouro, a -> q_sumidouro
+q_sumidouro, b -> q_sumidouro
+q0: q0
+F: q1
