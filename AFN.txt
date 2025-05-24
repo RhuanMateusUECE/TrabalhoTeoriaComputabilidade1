@@ -1,0 +1,9 @@
+# AFN Original
+Q: A, S, Z
+Σ: a, b
+δ:
+A, b -> S
+S, a -> A
+S, ε -> Z
+S: inicial
+F: Z
