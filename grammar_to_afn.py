@@ -44,6 +44,35 @@ class AFN:
         return resultado
 
 
+class AFD:
+    """Classe para representar um Autômato Finito Determinístico"""
+    
+    def __init__(self, estados, alfabeto, transicoes, estado_inicial, estados_finais):
+        self.Q = set(estados)           # Conjunto de estados
+        self.sigma = set(alfabeto)      # Alfabeto de entrada
+        self.delta = transicoes         # Função de transição
+        self.q0 = estado_inicial        # Estado inicial
+        self.F = set(estados_finais)    # Conjunto de estados finais
+    
+    def __str__(self):
+        resultado = "# AFD Determinizado\n"
+        resultado += f"Q: {', '.join(sorted(self.Q))}\n"
+        resultado += f"Σ: {', '.join(sorted(self.sigma))}\n"
+        resultado += "δ:\n"
+        
+        # Ordenar transições para saída consistente
+        for estado in sorted(self.Q):
+            for simbolo in sorted(self.sigma):
+                if (estado, simbolo) in self.delta:
+                    destino = self.delta[(estado, simbolo)]
+                    resultado += f"{estado}, {simbolo} -> {destino}\n"
+        
+        resultado += f"{self.q0}: inicial\n"
+        resultado += f"F: {', '.join(sorted(self.F))}\n"
+        
+        return resultado
+
+
 def converter_gramatica_para_afn(gramatica):
     """
     Converte uma Gramática Linear Unitária à Direita (GLUD) para um AFN
