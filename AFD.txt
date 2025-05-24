@@ -1,0 +1,10 @@
+# AFD Determinizado
+Q: {A}, {S, Z}
+Σ: a, b
+δ:
+{A}, a -> ∅
+{A}, b -> {S, Z}
+{S, Z}, a -> {A}
+{S, Z}, b -> ∅
+{S, Z}: inicial
+F: {S, Z}
