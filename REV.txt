@@ -1,0 +1,8 @@
+# AFD Reverso
+Q: {A}, {S, Z}
+Σ: a, b
+δ:
+{A}, a -> {S, Z}
+{S, Z}, b -> {A}
+{S, Z}: inicial
+F: {S, Z}
