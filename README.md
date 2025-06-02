@@ -42,12 +42,6 @@ Este projeto implementa um simulador educacional que converte **Gramáticas Line
 - Python 3.7 ou superior
 - Nenhuma dependência externa necessária
 
-### Download
-```bash
-git clone https://github.com/RhuanMateusUECE/TrabalhoTeoriaComputabilidade1.git
-cd TrabalhoTeoriaComputabilidade1
-```
-
 ---
 
 ## ⚡ Uso Rápido
