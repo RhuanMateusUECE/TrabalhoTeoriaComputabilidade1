@@ -324,7 +324,7 @@ Contribuições são bem-vindas! Para contribuir:
 
 ## 🐛 Reportar Bugs
 
-Encontrou um bug? [Abra uma issue](https://github.com/seu-usuario/simulador-automatos/issues) com:
+Encontrou um bug? [Abra uma issue](https://github.com/RhuanMateusUECE/TrabalhoTeoriaComputabilidade1/issues) com:
 
 - Descrição detalhada do problema
 - Arquivo de entrada que causou o erro
