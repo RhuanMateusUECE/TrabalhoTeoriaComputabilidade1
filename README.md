@@ -46,8 +46,8 @@ Este projeto implementa um simulador educacional que converte **Gramáticas Line
 
 ### Download
 ```bash
-git clone https://github.com/seu-usuario/simulador-automatos.git
-cd simulador-automatos
+git clone https://github.com/RhuanMateusUECE/TrabalhoTeoriaComputabilidade1.git
+cd TrabalhoTeoriaComputabilidade1
 ```
 
 ---
