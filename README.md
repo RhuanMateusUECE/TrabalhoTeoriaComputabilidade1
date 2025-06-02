@@ -1,7 +1,6 @@
 # 🤖 Simulador de Autômatos Finitos
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![Theory](https://img.shields.io/badge/Subject-Teoria%20da%20Computação-purple.svg)]()
 
 > **Implementação completa de simulação de autômatos finitos com operações e gramática linear à direita**
 
