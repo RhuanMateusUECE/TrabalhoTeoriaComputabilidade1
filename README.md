@@ -345,14 +345,6 @@ Encontrou um bug? [Abra uma issue](https://github.com/RhuanMateusUECE/TrabalhoTe
 
 ---
 
-## 🌟 Agradecimentos
-
-- Professor Bonfim Amaro Junior pela orientação
-- Comunidade acadêmica de Teoria da Computação
-- Livros de referência que inspiraram a implementação
-
----
-
 <div align="center">
 
 **⭐ Se este projeto foi útil, considere dar uma estrela! ⭐**
