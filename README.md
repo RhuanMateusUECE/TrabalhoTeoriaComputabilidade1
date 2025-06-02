@@ -1,7 +1,6 @@
 # 🤖 Simulador de Autômatos Finitos
 
 [![Python](https://img.shields.io/badge/Python-3.7+-blue.svg)](https://www.python.org/downloads/)
-[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Theory](https://img.shields.io/badge/Subject-Teoria%20da%20Computação-purple.svg)]()
 
 > **Implementação completa de simulação de autômatos finitos com operações e gramática linear à direita**
@@ -338,9 +337,10 @@ Encontrou um bug? [Abra uma issue](https://github.com/RhuanMateusUECE/TrabalhoTe
 - **Rhuan Mateus Matias Filgueira**
 - **Hilbert**
 
-**Curso:** Teoria da Computação  
+**Curso:** Ciências da Computação
+**Cadeira:** Teoria da Computabilidade  
 **Professor:** Bonfim Amaro Junior  
-**Instituição:** [Sua Universidade]  
+**Instituição:** Universidade Estadual do Ceará
 **Data:** Maio 2025
 
 ---
