@@ -353,18 +353,10 @@ Encontrou um bug? [Abra uma issue](https://github.com/RhuanMateusUECE/TrabalhoTe
 
 ---
 
-## 🔗 Links Úteis
-
-- [Documentação de Teoria da Computação](https://example.com)
-- [Tutorial de Autômatos Finitos](https://example.com)
-- [Exercícios Resolvidos](https://example.com)
-
----
-
 <div align="center">
 
 **⭐ Se este projeto foi útil, considere dar uma estrela! ⭐**
 
-[🏠 Página Inicial](https://github.com/seu-usuario/simulador-automatos) • [📖 Documentação](docs/) • [🐛 Issues](https://github.com/seu-usuario/simulador-automatos/issues) • [🔄 Pull Requests](https://github.com/seu-usuario/simulador-automatos/pulls)
+[🏠 Página Inicial](https://github.com/RhuanMateusUECE/TrabalhoTeoriaComputabilidade1)
 
 </div>
