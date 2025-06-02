@@ -333,12 +333,6 @@ Encontrou um bug? [Abra uma issue](https://github.com/RhuanMateusUECE/TrabalhoTe
 
 ---
 
-## 📄 Licença
-
-Este projeto está licenciado sob a **MIT License** - veja o arquivo [LICENSE](LICENSE) para detalhes.
-
----
-
 ## 👨‍💻 Autores
 
 - **Rhuan Mateus Matias Filgueira**
