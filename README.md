@@ -244,28 +244,6 @@ Este simulador implementa os seguintes conceitos de **Teoria da Computação**:
 
 ---
 
-## 🔧 Uso Programático
-
-### Exemplo de uso direto no código:
-
-```python
-# Criar gramática
-gramatica = Gramatica(['S', 'A'], ['a', 'b'], 
-                     ['S -> aA', 'A -> bS', 'S -> ε'], 'S')
-
-# Pipeline completo
-afn = converter_gramatica_para_afn(gramatica)
-afd = converter_afn_para_afd(afn)
-reverso = aplicar_operacao_reverso(afd)
-complemento = aplicar_operacao_complemento(afd)
-
-# Simular cadeia
-aceita, caminho, detalhes = simular_cadeia_afd(afd, "abab")
-print(f"Cadeia aceita: {aceita}")
-```
-
----
-
 ## 🧪 Testes e Validação
 
 ### Verificações Automáticas
@@ -283,14 +261,6 @@ python simulador_automatos.py
 # 1. Edite entrada.txt com sua gramática
 # 2. Execute novamente
 ```
-
----
-
-## 📚 Referências Teóricas
-
-- **Hopcroft, J. E.; Ullman, J. D.** - Introduction to Automata Theory, Languages, and Computation
-- **Sipser, M.** - Introduction to the Theory of Computation
-- **Aho, A. V.; Sethi, R.; Ullman, J. D.** - Compilers: Principles, Techniques, and Tools
 
 ---
 
@@ -328,7 +298,7 @@ Encontrou um bug? [Abra uma issue](https://github.com/RhuanMateusUECE/TrabalhoTe
 ## 👨‍💻 Autores
 
 - **Rhuan Mateus Matias Filgueira**
-- **Hilbert**
+- **Mardonio Hilbert**
 
 **Curso:** Ciências da Computação
 **Cadeira:** Teoria da Computabilidade  
