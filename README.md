@@ -19,7 +19,6 @@ Este projeto implementa um simulador educacional que converte **Gramáticas Line
 - [Arquivos Gerados](#-arquivos-gerados)
 - [Algoritmos Implementados](#-algoritmos-implementados)
 - [Contribuição](#-contribuição)
-- [Licença](#-licença)
 
 ---
 
