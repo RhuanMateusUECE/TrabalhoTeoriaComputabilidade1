@@ -119,15 +119,15 @@ Testa cadeias de entrada em todos os autômatos gerados.
 
 ```
 # Comentários começam com #
-# Definição da gramática (opcional)
+# Definição da gramática
 G = ({S, A}, {a, b}, P, S)
 
-# Produções (obrigatório)
+# Produções
 S -> aA
 A -> bS
 S -> ε
 
-# Cadeia de teste (opcional)
+# Cadeia de teste
 w = abab
 ```
 
